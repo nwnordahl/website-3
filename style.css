@@ -1,0 +1,114 @@
+:root {
+  --main-100: #ffe8d6;
+  --main-400: #ddbea9;
+  --main-800: #cb997e;
+
+  --accent-300: #b7b7a4;
+  --accent-400: #a5a58d;
+  --accent-800: #6b705c;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  margin: 1rem 0;
+  padding: 4px;
+  border: 4px solid black;
+  display: none;
+}
+
+header {
+  background-color: var(--main-800);
+}
+
+header,
+section {
+  padding: 3rem 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: min(90%, 70.5rem);
+}
+
+.narrow--container {
+  max-width: 40ch;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-1 {
+  background-color: var(--main-100);
+}
+
+.section-2 {
+  background-color: var(--accent-400);
+}
+
+.section-3 {
+  background-color: var(--accent-800);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 50em) {
+  img {
+    display: inline-block;
+  }
+
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--accent-800);
+  color: #fff;
+  padding: 0.5em 1.25em;
+  border-radius: 0.5em;
+}
+
+.button:hover,
+.button:focus-within {
+  background-color: var(--accent-400);
+}
